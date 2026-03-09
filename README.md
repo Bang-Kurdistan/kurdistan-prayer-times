@@ -216,6 +216,4 @@ This project is open source and freely available for public use. See [LICENSE](L
 
 **Built with ❤️ in Kurdistan**
 
-**بانگ** — _Serving the Muslim community across Kurdistan_
-
 </div>
