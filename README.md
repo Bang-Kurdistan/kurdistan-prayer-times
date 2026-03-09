@@ -202,7 +202,6 @@ Contributions are welcome! You can help by:
 - 🌆 **Adding new cities** — provide prayer time data in the same JSON format
 - 🔧 **Correcting times** — if you find inaccuracies, open an issue or submit a PR
 - 🌐 **Improving the web UI** — styling, accessibility, new features
-- 📖 **Translations** — help translate the interface to more languages
 
 ---
 
