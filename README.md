@@ -9,14 +9,14 @@
 [![License](https://img.shields.io/badge/license-open--source-green?style=flat-square)](LICENSE)
 [![Cities](https://img.shields.io/badge/cities-36-gold?style=flat-square)](#available-cities)
 [![Data](https://img.shields.io/badge/format-JSON-blue?style=flat-square)](#data-format)
-[![Pages](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square)](https://bang-kurdistan.github.io/kurdistan-prayer-times/)
+[![Pages](https://img.shields.io/badge/demo-live-brightgreen?style=flat-square)](https://bang-kurdistan.github.io/)
 
 <br />
 
 **بانگ** (Bang) is a prayer times app built for Kurdistan.
 This repository is the **open data layer** behind it — accurate, city-level Islamic prayer schedules for every day of the year.
 
-**[🌐 Live Demo](https://bang-kurdistan.github.io/kurdistan-prayer-times/)** · **[📥 Download Data](#downloads)** · **[🐛 Report Issue](https://github.com/Bang-Kurdistan/kurdistan-prayer-times/issues)**
+**[🌐 Live Demo](https://bang-kurdistan.github.io/)** · **[📥 Download Data](#downloads)** · **[🐛 Report Issue](https://github.com/Bang-Kurdistan/kurdistan-prayer-times/issues)**
 
 <br />
 
@@ -147,7 +147,7 @@ Each city has a JSON file in the `data/` directory containing an array of daily 
 
 ### From the Web
 
-Visit the **[live site](https://bang-kurdistan.github.io/kurdistan-prayer-times/)** and use:
+Visit the **[live site](https://bang-kurdistan.github.io/)** and use:
 
 - **"Download CSV"** button — downloads the currently selected city's prayer times as a CSV file
 - **"Download All Cities"** button — fetches all 36 cities and generates a single combined CSV
