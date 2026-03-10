@@ -3,8 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>بانگ — Kurdistan Prayer Times</title>
-  <meta name="description" content="Daily Islamic prayer times for 36 cities across the Kurdistan Region of Iraq, powering the بانگ app." />
+  <title>بانگ — نوێژەکانی کوردستان | Kurdistan Prayer Times | 36 شار</title>
+  <meta name="description" content="Accurate Islamic prayer times for 36 cities across the Kurdistan Region of Iraq. Includes Hawler, Slemany, Duhok, Kirkuk, and more. Daily Fajr, Sunrise, Dhuhr, Asr, Maghrib, Isha times." />
+  <meta name="keywords" content="prayer times, نوێژەکان, Kurdistan, کوردستان, Hawler, هه‌ولێر, Slemany, سلێمانی, Duhok, دهۆك, Kirkuk, كه‌ركووك, Islamic prayer, Muslim, Islam, namaz times, salaah" />
+  <!-- Kurdish Description -->
+  <meta name="description" lang="ku" content="کاتی نوێژ بۆ ٣٦ شاری کوردستان. هه‌ولێر، سلێمانی، دهۆك، كه‌ركووك و هتد. کاتی بانگی بەیانی نیوەڕۆ، عەسر، شێوان، خەوتنان." />
+  <link rel="canonical" href="https://bang-kurdistan.github.io/" />
+  <link rel="alternate" hreflang="en" href="https://bang-kurdistan.github.io/" />
+  <link rel="alternate" hreflang="ku" href="https://bang-kurdistan.github.io/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bang-kurdistan.github.io/" />
+  <meta property="og:title" content="بانگ — نوێژەکانی کوردستان | Kurdistan Prayer Times" />
+  <meta property="og:description" content="Accurate Islamic prayer times for 36 cities across the Kurdistan Region of Iraq. Free, open source data. | کاتی بانگدان بۆ ٣٦ شاری کوردستان" />
+  <meta property="og:image" content="https://bang-kurdistan.github.io/logo.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ku_IQ" />
+  <meta property="og:site_name" content="بانگ Kurdistan Prayer Times" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="https://bang-kurdistan.github.io/" />
+  <meta name="twitter:title" content="بانگ — Kurdistan Prayer Times" />
+  <meta name="twitter:description" content="Accurate Islamic prayer times for 36 cities across the Kurdistan Region of Iraq." />
+  <meta name="twitter:image" content="https://bang-kurdistan.github.io/logo.png" />
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "بانگ — Kurdistan Prayer Times",
+    "alternateName": "Bang Kurdistan Prayer Times",
+    "description": "Accurate Islamic prayer times for 36 cities across the Kurdistan Region of Iraq",
+    "url": "https://bang-kurdistan.github.io/",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Bang-Kurdistan"
+    },
+    "keywords": "prayer times, Islamic prayer, Kurdistan, Iraq, Hawler, Slemany, Duhok, Kirkuk, Namaz, Salah, نوێژەکان, کاتی نوێژ, بانگ, کوردستان, هه‌ولێر, سلێمانی, دهۆك, كه‌ركووك, ناواز, salaah, azan times",
+    "inLanguage": ["en", "ku", "ar"],
+    "alternateName": ["بانگ", "Bang", "Kurdistan Prayer Times", "نوێژەکانی کوردستان"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet" />
@@ -624,6 +674,7 @@
       </h1>
       <p class="hero-sub">
         Accurate Islamic prayer times for 36 cities across the Kurdistan Region of Iraq — the data powering the <strong>بانگ</strong> app.
+        <br><span style="font-family:'Noto Naskh Arabic',serif;color:var(--text-2);">کاتی بانگدان بۆ ٣٦ شاری کوردستان — زانیاری ئەپلیکەیشنی بانگ</span>
       </p>
 
       <div class="app-links">
@@ -692,6 +743,14 @@
 
     <!-- All city tables rendered here -->
     <div id="allCityPanels"></div>
+
+    <!-- SEO: City Links Section -->
+    <section style="margin-top:60px;padding:32px;background:var(--bg-1);border:1px solid var(--border);border-radius:var(--radius-lg);">
+      <h3 style="font-size:1.1rem;font-weight:600;color:var(--text-2);margin-bottom:20px;">City Prayer Times — نوێژەکانی شارەکان</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;font-size:0.85rem;" id="cityLinks">
+        <!-- Links populated by JS -->
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -916,8 +975,8 @@
               '<th>Sunrise<br><span class="kd" style="font-size:1.5rem;">خۆرهەڵات</span></th>' +
               '<th>Dhuhr<br><span class="kd" style="font-size:1.5rem;">نیوەڕۆ</span></th>' +
               '<th>Asr<br><span class="kd" style="font-size:1.5rem;">عەسر</span></th>' +
-              '<th>Maghrib<br><span class="kd" style="font-size:1.5rem;">ئێواره</span></th>' +
-              '<th>Isha<br><span class="kd" style="font-size:1.5rem;">عیشا</span></th>' +
+              '<th>Maghrib<br><span class="kd" style="font-size:1.5rem;">شێوان</span></th>' +
+              '<th>Isha<br><span class="kd" style="font-size:1.5rem;">خەوتنان</span></th>' +
             '</tr></thead>' +
             '<tbody id="tbody-' + city + '">' +
               (cityData[city] ? buildPanelHTML(city, cityData[city]) : '<tr><td colspan="7"><div class="loader"><div class="spinner"></div>Loading…</div></td></tr>') +
@@ -982,6 +1041,40 @@
   createAllPanels();
   renderCities();
   renderAllPanels();
+
+  // ── SEO: Render city links ────────────────────────────────────────────
+  (function() {
+    var cityLinks = document.getElementById('cityLinks');
+    if (!cityLinks) return;
+
+    var cityUrls = {
+      Hawler: 'hawler', Slemany: 'slemany', Duhok: 'duhok', Kirkuk: 'kirkuk',
+      Halabja: 'halabja', Soran: 'soran', Koya: 'koya', Akre: 'akre',
+      Chamchamal: 'chamchamal', Qaladze: 'qaladze', Ranya: 'ranya', Kfri: 'kfri',
+      Kalar: 'kalar', Zaxo: 'zaxo', Darbandixan: 'darbandixan', mosul: 'mosul',
+      tuzxurmatu: 'tuzxurmatu', Amedi: 'amedi', SaidSadiq: 'said-sadiq', Penjuin: 'penjuin',
+      HalabjaN: 'halabja-nwe', Arbat: 'arbat', Piramagrun: 'piramagrun', Tasluja: 'tasluja',
+      Bazyan: 'bazyan', Dukan: 'dukan', Takya: 'takya', HajiAwa: 'haji-awa',
+      Xalakan: 'xalakan', TaqTaq: 'taq-taq', Barznja: 'barznja', Qaradax: 'qaradax',
+      QadirKaram: 'qadir-karam', Xanaqin: 'xanaqin', Chwarta: 'chwarta', qasre: 'qasre'
+    };
+
+    var html = '';
+    CITIES.forEach(function(city) {
+      var url = cityUrls[city] || city.toLowerCase();
+      html += '<a href="cities/' + url + '.html" style="color:var(--text-2);text-decoration:none;padding:8px 12px;display:block;border-radius:6px;transition:0.2s;">' +
+        '<span style="font-family:\'Noto Naskh Arabic\',serif;display:block;font-size:1rem;color:var(--text-1);">' + dispKu(city) + '</span>' +
+        '<span style="font-size:0.8rem;">' + dispEn(city) + '</span>' +
+        '</a>';
+    });
+    cityLinks.innerHTML = html;
+
+    // Add hover effect
+    cityLinks.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('mouseenter', function() { this.style.background = 'var(--bg-2)'; });
+      a.addEventListener('mouseleave', function() { this.style.background = 'transparent'; });
+    });
+  })();
   </script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+# robots.txt for bang-kurdistan.github.io
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bang-kurdistan.github.io/sitemap.xml
+
+# Crawl-delay (optional, be polite to servers)
+Crawl-delay: 1

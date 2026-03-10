@@ -138,8 +138,8 @@ Each city has a JSON file in the `data/` directory containing an array of daily 
 | `Sunrise` | Sunrise time        | خۆرهەڵات     |
 | `Dhuhr`   | Noon prayer         | نیوەڕۆ       |
 | `Asr`     | Afternoon prayer    | عەسر         |
-| `Maghrib` | Sunset prayer       | ئێواره       |
-| `Isha`    | Night prayer        | عیشا         |
+| `Maghrib` | Sunset prayer       | شێوان        |
+| `Isha`    | Night prayer        | خەوتنان      |
 
 ---
 
